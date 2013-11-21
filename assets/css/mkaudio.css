@@ -1,0 +1,57 @@
+
+	#navbar-custom {
+		font-size: 15px;
+		font-family: 'montserrat-regular';
+	}
+
+	#meow-kling-brand {
+		margin-left: 60px;
+		font-size: 20px;
+		color: #ffffff;
+	}
+
+	#facebookIcon {
+		opacity: 0.5;
+	}
+
+	#facebookIcon:hover {
+		opacity: 1.0;
+	}
+
+	#navbar-custom {
+		/*background-color: #000000;*/
+		background-color: #282828;
+	}
+
+	#ul-custom {
+
+	}
+
+	#ul-custom > li {
+		padding-left: 20px;
+		padding-right: 20px;	
+	}
+
+	#ul-custom > li > a {
+		color: #ffffff;
+	}
+
+	#underConstructionContainer > img {
+		height: 500px;
+		width: 500px;
+	}
+
+	.section {
+		width: 100%;
+	}
+
+	.section-inner {
+		width: 80%;
+		margin: auto;
+	}
+
+	.section-inner h1 {
+		text-align: center;	
+		padding-top: 50px;
+	}
+
