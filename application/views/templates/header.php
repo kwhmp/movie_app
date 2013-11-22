@@ -5,11 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Movie Analyzer</title>
 		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.css">
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css">
+		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/docs.css">
 		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
 		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/Chart.js"></script>
 	</head>
-	<body>
+	<body data-spy="scroll" data-target="#my-nav">
 		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
@@ -23,7 +25,7 @@
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav pull-right">
-						<li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
+						<li><a href="<?php echo base_url(); ?>">Home</a></li>
 						<li><a href="#about">About</a></li>
 						<li><a href="#contact">Contact</a></li>
 						<li class="dropdown">

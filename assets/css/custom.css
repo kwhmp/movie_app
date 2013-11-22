@@ -1,0 +1,16 @@
+
+	@font-face {
+		font-family: 'montserrat-regular';
+		src: url('<?php echo base_url(); ?>assets/fonts/Montserrat-Regular.ttf');
+		font-family: 'montserrat-bold';
+		src: url('<?php echo base_url(); ?>assets/fonts/Montserrat-Bold.ttf');
+	}
+
+	* {
+		font-family: 'montserrat-regular';
+	}
+
+	.custom-nav > li > a {
+		padding-left: 25px;
+		font-size: 13px;
+	}
