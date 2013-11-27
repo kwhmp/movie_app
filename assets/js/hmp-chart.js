@@ -154,3 +154,79 @@
 		plot("myChart", chartData);
 
 	}
+    
+    function LineChartStudios(json_object){
+        
+        var title = createTitle("All Time", 30, 60);
+		var axisX = createAxisX("Title", 90, 16);
+		var axisY = createAxisY("Top Gross", "$", "M", 16);
+
+		axisX.titleFontSize = 30;
+        axisX.minimum = 1999;
+        axisX.maximum = 2014;
+		axisY.titleFontSize = 30;
+        
+       
+        //dataSeries.tooltip
+        
+        var index = 0;
+        var data = new Array();
+        var tempyear = 0;
+        for(var i = 1 ; i <= 10 ; i++){
+            var dataSeries = new Object();
+            dataSeries.type = "line";
+        	var dataPoints = new Array();
+
+            var obj = eval(json_object[index]);
+            while (parseInt(obj.year) > tempyear) {
+                tempyear = parseInt(obj.year);
+                index++;
+                var label = new Object();
+                label.x = obj.year;
+                label.y = parseFloat(obj.total_gross);
+                
+                dataPoints.push(label);
+                obj = eval(json_object[index]);
+            }
+            tempyear = 0;
+			
+            dataSeries.dataPoints = dataPoints;
+            dataSeries.name = obj.studio;
+            dataSeries.showInLegend = true;
+            data.push(dataSeries);
+        }
+        
+//        var index = 0;
+//        var tempyear = 0;
+//        var data = new Array();
+//        for (var i = 1; i <= 3; i++) {
+//            var dataSeries = new Object();
+//            dataSeries.type = "line";
+//            var dataPoints = new Array();
+//            
+//        }
+        
+        
+        
+        
+        
+        var chartData = new Object();
+        
+//        chartData.zoomEnabled = true;
+		chartData.title = title;
+		chartData.axisX = axisX;
+		chartData.axisY = axisY;
+		chartData.data = data;
+//        chartData.theme = "theme2";
+            plot("myChart", chartData);
+        
+    }
+
+
+
+
+
+
+
+
+

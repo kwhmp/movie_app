@@ -19,7 +19,11 @@ class Dao_M extends CI_Model {
 		$result = $this->db->query($query);
 		return $result->result_array();	
 	}
-
+    public function getLineChartStudios(){
+        $query = "SELECT `studio`,`total_gross`,`year` FROM `studios` GROUP BY studio,year";
+        $result = $this->db->query($query);
+        return $result->result_array();
+    }
 }
 
 ?>

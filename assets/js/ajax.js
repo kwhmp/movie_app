@@ -55,3 +55,26 @@
 			}
 		});
 	});
+
+    $(document).on("click", '#Linechart_Studios' , function(){
+        $.ajax({
+           url: "ajax_c/getStudiosLineChart",
+            type: "get",
+            success: function(response){
+                var json_object = eval(response);
+                LineChartStudios(json_object);
+            },
+            error:function(xhr,error){
+                alert(xhr.responseText + error.Message);
+            }
+        });  
+    });
+
+        
+                   
+                   
+                   
+                   
+                   
+                   
+                   

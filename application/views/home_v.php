@@ -32,7 +32,7 @@
 							<a href="#" onclick="toggle_menu('3')">Studios</a>
 							<ul id="3_menu" class="custom-nav nav nav-stacked">
 								<li>
-									<a id="alltime" href="#">All time</a>
+									<a id="Linechart_Studios" href="#">Studio in 10 years</a>
 								</li>		
 							</ul>
 						</li>
