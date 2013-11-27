@@ -104,6 +104,7 @@
 
 		var chartData = new Object();
 
+		chartData.zoomEnabled = true;
 		chartData.title = title;
 		chartData.axisX = axisX;
 		chartData.axisY = axisY;
@@ -116,7 +117,7 @@
 	function studios(json_object) {
 
 		var title = createTitle("Studios", 30, 60);
-		var axisX = createAxisX("Studio", 0, 20);
+		var axisX = createAxisX("Studio", 0, 16);
 		var axisY = createAxisY("Top Gross", "$", "M", 16);
 
 		axisX.titleFontSize = 30;
@@ -130,7 +131,7 @@
 
 		var dataPoints = new Array();
 
-		for (var i = 0; i <= 9; i++) {
+		for (var i = 0; i <= 10; i++) {
 			var label = new Object();
 			var obj = eval(json_object[i]);
 			label.label = obj.studio;
@@ -144,6 +145,7 @@
 
 		var chartData = new Object();
 
+		chartData.zoomEnabled = true;
 		chartData.title = title;
 		chartData.axisX = axisX;
 		chartData.axisY = axisY;
