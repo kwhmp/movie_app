@@ -10,6 +10,10 @@
 		font-family: 'montserrat-regular';
 	}
 
+	.custom-nav {
+		line-height: 0.8;
+	}
+
 	.custom-nav > li > a {
 		padding-left: 25px;
 		font-size: 13px;

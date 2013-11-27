@@ -13,8 +13,15 @@ class Ajax_C extends CI_Controller {
 
 	public function getAllTime() {
 		echo json_encode($this->dao_m->getAllTime());
-		// echo "OK";
+	}
+
+	public function getYearly() {
+		echo json_encode($this->dao_m->getYearly());
 	}	
+
+	public function getStudios() {
+		echo json_encode($this->dao_m->getStudios());
+	}
 	
 }
 

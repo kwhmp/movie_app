@@ -10,8 +10,12 @@
 		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
 		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/Chart.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/polychart2.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/canvasjs.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/hmp-chart.js"></script>
+		<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/ajax.js"></script>
 	</head>
-	<body data-spy="scroll" data-target="#my-nav">
+	<body>
 		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">

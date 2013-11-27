@@ -1,43 +1,64 @@
 
 	<div class="container">
-		<div class="row" style="padding-top: 50px;">
+		<div class="row" style="padding-top: 50px; padding-bottom: 50px;">
 			<div class="col-sm-3">
-				<div class="sidebar-nav-fixed" data-spy="affix" data-offset-top="0">
+				<div data-spy="affix" data-offset-top="0">
 					<ul id="my-nav" class="nav" style="background-color: #eeeeee; width: 250px;">
 						<li>
 							<a href="#" onclick="toggle_menu('1')">All time</a>
 							<ul id="1_menu" class="custom-nav nav nav-stacked">
+								<li>
+									<a id="alltime_graph" href="#">All time</a>
+								</li>
+								<li>
+									<a id="yearly_graph" href="#">Year</a>
+								</li>
+								<li>
+									<a id="studios_graph" href="#">Studios</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" onclick="toggle_menu('2')">Yearly</a>
+							<ul id="2_menu" class="custom-nav nav nav-stacked">
+								<?php for($i = 2013; $i >= 2010; $i--) { ?>
+									<li>
+										<a href="#"><?php echo $i; ?></a>
+									</li>
+								<?php } ?>
+							</ul>
+						</li>
+						<li>
+							<a href="#" onclick="toggle_menu('3')">Studios</a>
+							<ul id="3_menu" class="custom-nav nav nav-stacked">
 								<li>
 									<a id="alltime" href="#">All time</a>
 								</li>		
 							</ul>
 						</li>
 						<li>
-							<a href="#" onclick="toggle_menu('2')">Yearly</a>
-							<ul id="2_menu" class="custom-nav nav nav-stacked">
+							<a href="#" onclick="toggle_menu('4')">Genres</a>
+							<ul id="4_menu" class="custom-nav nav nav-stacked">
 								<li>
-									<a href="#">All year</a>	
+									<a id="alltime" href="#">All time</a>
 								</li>		
+							</ul>
+						</li>
+						<li>
+							<a href="#" onclick="toggle_menu('5')">People</a>
+							<ul id="5_menu" class="custom-nav nav nav-stacked">
 								<li>
-									<a href="#">2013</a>	
+									<a id="alltime" href="#">All time</a>
 								</li>		
-								<li>
-									<a href="#">2012</a>	
-								</li>		
-								<li>
-									<a href="#">2011</a>	
-								</li>
-								<li>
-									<a href="#">2010</a>	
-								</li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-sm-9">
-				<div style="width: 830px; height: 520px; position: fixed; border: 1px solid #eeeeee;">
-
+				<div style="width: 800px; height: 800px; margin-left: 25px; margin-bottom: 100px;">
+					<!-- <canvas id="myChart" width="800" height="500"></canvas> -->
+					<div id="myChart" style="height: 800px; width: 800px;"></div>
 				</div>
 			</div>
 		</div>
@@ -49,26 +70,8 @@
 			close_all_menu();
 		});
 
-		$(document).on("click", '#alltime', function() {
-			$.ajax({
-				url: "ajax_c/getAllTime",
-				type: "get",
-				success: function(response) {
-					// var json_object = JSON.parse(response);
-					var json_object = eval(response);
-					for (var i = 0; i < 5; i++) {
-						var obj = eval(json_object[i]);
-						alert(obj.title + " " + obj.worldwide);
-					};
-				},
-				error: function(xhr, error) {
-					alert(xhr.responseText + error.Message);
-				}
-			});
-		});
-
 		function close_all_menu() {
-			for (var i = 1; i <= 2; i++) {
+			for (var i = 1; i <= 5; i++) {
 				$("#" + i + "_menu").hide();
 			};
 		}
