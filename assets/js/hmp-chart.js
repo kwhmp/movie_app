@@ -295,7 +295,7 @@
 	}
 
 	function LineChartStudios(json_object){
-		var title = createTitle("Top 10 Studios", 30, 60);
+		var title = createTitle("Top 5 Studios", 30, 60);
 		var axisX = createAxisX("Year", 90, 16);
 		var axisY = createAxisY("Total Gross", "$", "M", 16);
 
@@ -310,7 +310,7 @@
 		var data = new Array();
 		var tempyear = 0;
 		var tempstudio = "";
-		for(var i = 0 ; i < 9 ; i++){
+		for(var i = 0 ; i < 5 ; i++){
 			var dataSeries = new Object();
 			dataSeries.type = "line";
 			var dataPoints = new Array();

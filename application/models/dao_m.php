@@ -21,7 +21,7 @@ class Dao_M extends CI_Model {
 	}
 
 	public function getGenres() {
-		$query = "SELECT worldwide_gross, genre FROM movie_hmp.movies GROUP BY genre, worldwide_gross ORDER BY genre DESC LIMIT 60";
+		$query = "SELECT worldwide_gross, genre FROM movies GROUP BY genre, worldwide_gross ORDER BY genre DESC LIMIT 60";
 		$result = $this->db->query($query);
 		return $result->result_array();
 	}
@@ -39,7 +39,7 @@ class Dao_M extends CI_Model {
     }
 
     public function getActionGenre() {
-    	$query = "SELECT * FROM movie_hmp.movies WHERE genre = 'Action'";
+    	$query = "SELECT * FROM movies WHERE genre = 'Action'";
     	$result = $this->db->query($query);
         return $result->result_array();
     }
@@ -47,7 +47,7 @@ class Dao_M extends CI_Model {
     public function getCompare() {
     	$first = "'" . $this->input->get("first") . "'";
     	$second = "'" . $this->input->get("second") . "'";
-    	$query = "SELECT `studio`,`total_gross`,`year` FROM movie_hmp.studios WHERE studio = " . $first . " OR studio = " . $second . " ORDER BY studio";
+    	$query = "SELECT `studio`,`total_gross`,`year` FROM studios WHERE studio = " . $first . " OR studio = " . $second . " ORDER BY studio";
     	$result = $this->db->query($query);
         return $result->result_array();
     }
@@ -60,7 +60,7 @@ class Dao_M extends CI_Model {
 	}
 
 	public function getGenresForDropdown() {
-		$query = "SELECT * FROM movie_hmp.genres ORDER BY genre";
+		$query = "SELECT * FROM genres ORDER BY genre";
 		$result = $this->db->query($query);
 		return $result->result_array();
 	}

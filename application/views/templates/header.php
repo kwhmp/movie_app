@@ -71,10 +71,8 @@
 								<li><a id="Linechart_Studios" href="#">All Studio</a></li>
 								<!-- <li class="divider"></li> -->
 								<!-- <li><a id="toggleCompare" href="#">Compare between two studios</a></li> -->
-								<li class="divider"></li>
-								<?php foreach($studios as $s) { ?>
-									<li><a id="<?php echo $s['studio'];?>" href="#"><?php echo $s['studio'];?></a></li>
-								<?php } ?>
+								<!-- <li class="divider"></li> -->
+								
 							</ul>
 						</li>
 						<!-- <li class="dropdown">
