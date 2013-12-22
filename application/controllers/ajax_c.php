@@ -22,6 +22,22 @@ class Ajax_C extends CI_Controller {
 	public function getStudios() {
 		echo json_encode($this->dao_m->getStudios());
 	}
+
+	public function getGenres() {
+		echo json_encode($this->dao_m->getGenres());
+	}
+
+	public function getPeople() {
+		echo json_encode($this->dao_m->getPeople());
+	}
+
+	public function getStudiosLineChart() {
+        echo json_encode($this->dao_m->getLineChartStudios());
+    }
+
+    public function getCompare() {
+    	echo json_encode($this->dao_m->getCompare());
+    }
 	
 }
 
